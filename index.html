@@ -28,13 +28,12 @@
         <li><a href="#eligibility" data-route="eligibility">Eligibility</a></li>
         <li><a href="#apply" data-route="apply">Apply</a></li>
         <li><a href="#calculator" data-route="calculator">Calculator</a></li>
-        <li><a href="#dashboard" data-route="dashboard">Dashboard</a></li>
-        <li><a href="#repayment" data-route="repayment">Repayment</a></li>
         <li><a href="#stories" data-route="stories">Impact Stories</a></li>
         <li><a href="#partners" data-route="partners">Partners</a></li>
         <li><a href="#contact" data-route="contact">Contact</a></li>
       </ul>
     </nav>
+    <a href="#admin-login" class="btn btn-ghost admin-link">Staff / Admin login</a>
   </header>
 
   <main id="app">
@@ -362,8 +361,8 @@
         </fieldset>
 
         <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Submit &amp; approve application</button>
-          <span class="form-hint">Applications are approved immediately after submission.</span>
+          <button type="submit" class="btn btn-primary">Submit application for review</button>
+          <span class="form-hint">Applications go into pending review before approval.</span>
         </div>
       </form>
 
@@ -411,6 +410,7 @@
       </div>
     </section>
     <section class="page" id="page-dashboard">
+      <a href="#admin-dashboard" class="admin-back-link" hidden>&larr; Back to Admin Panel</a>
       <h1>Dashboard</h1>
       <p class="lede">Live totals drawn from every application and repayment on file.</p>
 
@@ -430,6 +430,7 @@
       </div>
     </section>
     <section class="page" id="page-repayment">
+      <a href="#admin-dashboard" class="admin-back-link" hidden>&larr; Back to Admin Panel</a>
       <h1>Repayment Tracking</h1>
       <p class="lede">Select a loan to record a monthly payment or review its history.</p>
 
@@ -599,6 +600,40 @@
           </div>
         </form>
       </div>
+    </section>
+
+    <section class="page" id="page-admin-login">
+      <div class="admin-card">
+        <h1>FIPA Loan Facility — Admin Login</h1>
+        <p class="lede">For authorized NiV staff only. Log in to register borrowers, manage groups, review and
+          approve loan applications, record disbursements, and track repayments.</p>
+        <form id="adminLoginForm" class="form-grid">
+          <label>Username<input type="text" name="username" required autocomplete="username"></label>
+          <label>Password<input type="password" name="password" required autocomplete="current-password"></label>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Log in</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="page" id="page-admin-dashboard">
+      <h1>FIPA Loan Facility — Admin Panel</h1>
+      <p class="lede">Register borrowers, manage groups of ten, review and approve loan applications, record
+        disbursements, track repayments and outstanding balances, and flag overdue loans.</p>
+      <div class="dash-grid" id="adminDashGrid"></div>
+      <div class="strip-divider" aria-hidden="true"></div>
+      <div class="admin-actions">
+        <button class="btn btn-primary" id="viewApplicationsBtn">Application Review</button>
+        <button class="btn btn-ghost" id="registerApplicantBtn">Register Applicant</button>
+        <button class="btn btn-ghost" id="viewGroupsBtn">Group Management</button>
+        <button class="btn btn-ghost" id="viewLoansBtn">Loan Management</button>
+        <button class="btn btn-ghost" id="repaymentTrackingBtn">Repayment Tracking</button>
+        <button class="btn btn-ghost" id="borrowerHistoryBtn">Borrower History</button>
+        <button class="btn btn-ghost" id="viewReportsBtn">Reports &amp; Statistics</button>
+        <button class="btn btn-ghost" id="adminLogoutBtn">Log out</button>
+      </div>
+      <div id="adminDashboardContent"></div>
     </section>
 
   </main>

@@ -693,9 +693,265 @@ textarea:focus {
   color: #A13A2F;
 }
 
+.badge-approved {
+  background: #E3DDFB;
+  color: #4A2FA1;
+}
+
+.badge-rejected {
+  background: #F1DADA;
+  color: #8A2E2E;
+}
+
+.badge-overdue {
+  background: #F8D2CC;
+  color: #9B2C1A;
+}
+
+.admin-back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--brand-green);
+  text-decoration: none;
+}
+
+.admin-back-link:hover {
+  text-decoration: underline;
+}
+
+.admin-subform {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.3rem;
+}
+
+.admin-subform h3 {
+  margin-top: 0;
+}
+
+.admin-inline-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.admin-inline-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.admin-inline-form .form-actions {
+  margin: 0;
+}
+
+.member-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.member-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem 0.35rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.member-pill button {
+  border: none;
+  background: none;
+  color: #A13A2F;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.admin-progress {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.admin-tab-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-tab-row .small-btn.active {
+  background: var(--brand-green);
+  color: var(--white);
+}
+
 .record-actions {
   display: flex;
   gap: 0.5rem;
+}
+
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--brand-green);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--brand-green);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.admin-link:hover {
+  background: var(--brand-green);
+  color: var(--white);
+}
+
+.admin-card-small {
+  border-left-color: var(--brand-green);
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+}
+
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-section-meta {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid var(--line);
+  padding: 0.9rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.admin-table th {
+  background: #F7F9FA;
+  color: var(--brand-dark);
+  font-size: 0.9rem;
+}
+
+.admin-detail-card {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.admin-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.admin-detail-grid strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.25rem;
+}
+
+.admin-detail-grid p {
+  margin: 0;
+  color: var(--brand-dark);
+}
+
+.admin-detail-notes {
+  background: var(--paper-warm);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.admin-detail-notes h4 {
+  margin: 0 0 0.5rem;
+}
+
+.admin-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.admin-report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.report-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.report-card strong {
+  display: block;
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.admin-filter-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.admin-filter-row label {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .admin-actions,
+  .admin-filter-row,
+  .admin-detail-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .small-btn {
